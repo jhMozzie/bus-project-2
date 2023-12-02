@@ -55,7 +55,6 @@ Route::middleware(['auth', 'check_user_type:3'])->group(function () {
         Route::put('/admin/buses/{bus}', [BusController::class, 'update'])->name('admin.buses.update');
         Route::delete('/buses/{bus}', [BusController::class, 'destroy'])->name('admin.buses.destroy');
 
-
     });
     // Route::get('/admin/buses/index', [BusController::class, 'index'])->name('admin.buses.index');
 });

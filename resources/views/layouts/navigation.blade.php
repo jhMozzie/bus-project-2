@@ -70,11 +70,11 @@
                     @endif
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    {{-- @if (Auth::user()->isType(3)) --}}
-                    <x-nav-link :href="route('admin.buses.index')" :active="request()->routeIs('admin.buses.index')">
-                        {{ __('Buses') }}
-                    </x-nav-link>
-                    {{-- @endif --}}
+                    @if (Auth::user()->isType(3))
+                        <x-nav-link :href="route('admin.buses.index')" :active="request()->routeIs('admin.buses.index')">
+                            {{ __('Buses') }}
+                        </x-nav-link>
+                    @endif
                 </div>
             </div>
 
